@@ -1,0 +1,132 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".CadastroActivity" >
+
+    <TextView
+        android:id="@+id/anuncioTituloText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/anuncioTituloText" />
+
+    <EditText
+        android:id="@+id/anuncioTitulo"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/anuncioTituloText"
+        android:layout_alignBaseline="@+id/anuncioTituloText"
+        android:layout_toRightOf="@+id/anuncioTituloText"
+	    android:layout_marginLeft="35dp"
+	    android:layout_marginRight="10dp"
+        android:inputType="text">
+    	<requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/anuncioCategoriaText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/anuncioTituloText"
+        android:layout_marginTop="50dp"
+        android:text="@string/anuncioCategoriaText" />
+
+     <Spinner
+		android:id="@+id/categorias"
+	   	android:layout_width="220dp"
+	   	android:layout_height="wrap_content"
+	   	android:layout_toRightOf="@+id/anuncioCategoriaText"
+	    android:layout_marginLeft="10dp"
+	    android:layout_marginRight="10dp"
+	   	android:layout_alignBaseline="@+id/anuncioCategoriaText" />
+
+    <TextView
+        android:id="@+id/anuncioImagemText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/anuncioCategoriaText"
+        android:layout_marginTop="50dp"
+        android:text="@string/anuncioImagemText" />
+
+    <Button
+        android:id="@+id/anuncioTirarFotoButton"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/anuncioImagemText"
+        android:layout_alignBaseline="@+id/anuncioImagemText"
+	    android:layout_marginLeft="18dp"
+	    android:layout_marginRight="5dp"
+        android:layout_centerHorizontal="true"
+        android:onClick="onClick"
+        android:text="@string/anuncioTirarFotoButton" />
+
+    <Button
+        android:id="@+id/anuncioSelecionaFotoButton"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/anuncioTirarFotoButton"
+        android:layout_alignBaseline="@+id/anuncioTirarFotoButton"
+	    android:layout_marginLeft="5dp"
+	    android:layout_marginRight="10dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/anuncioSelecionaFotoButton" />
+    
+    <TextView
+        android:id="@+id/anuncioPrecoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:layout_below="@+id/anuncioImagemText"
+        android:text="@string/anuncioPrecoText" />
+
+    <EditText
+        android:id="@+id/anuncioPreco"
+        android:layout_width="220dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/anuncioPrecoText"
+        android:layout_alignBaseline="@+id/anuncioPrecoText"
+        android:layout_toRightOf="@+id/anuncioPrecoText"
+	    android:layout_marginLeft="37dp"
+	    android:layout_marginRight="10dp"
+        android:inputType="numberDecimal">
+    	<requestFocus />
+    </EditText>
+    
+    <TextView
+        android:id="@+id/anuncioDescricaoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/anuncioPrecoText"
+        android:layout_marginTop="50dp"
+        android:text="@string/anuncioDescricaoText" />
+
+   <EditText
+	    android:id="@+id/anuncioDescricao"
+	    android:layout_width="220dp"
+	    android:layout_height="120dp"
+	    android:gravity="top"
+	    android:singleLine="false"
+	    android:lines="5"
+	    android:layout_marginLeft="10dp"
+	    android:layout_marginRight="10dp"
+        android:layout_alignBaseline="@+id/anuncioDescricaoText"
+        android:layout_toRightOf="@+id/anuncioDescricaoText"
+	    android:inputType="textMultiLine" />
+
+    <Button
+        android:id="@+id/anuncioSalvarButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/anuncioDescricaoText"
+	    android:layout_marginLeft="5dp"
+	    android:layout_marginRight="5dp"
+	    android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/anuncioSalvarButton" />
+   
+</RelativeLayout>
